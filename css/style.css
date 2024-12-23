@@ -1,140 +1,231 @@
+center /* General body styles */
 body {
     margin: 0;
     padding: 0;
 
 }
+
 .stpageall {
     background-color: #87509c;
     height: 330px;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
 }
+
 .thenavbar {
-    position: absolute; /* Fix the navbar to the top of the page */
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    width: 100%; /* Make the navbar span across the full width */
-    background-color: #87509c; /* Background color */
-    padding: 10px 0; /* Padding around the navbar */
-    color: white; /* Text color */
-    text-align: center; /* Center-align text */
-    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    width: 100%;
+    background-color: #87509c;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    z-index: 1000;
 }
 
 .thenavbar ul {
-    list-style-type: none; /* Remove default list bullets */
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Horizontal layout for the list items */
-    justify-content: center; /* Center the items horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 .thenavbar ul li {
-    margin: 0 20px; /* Add space between list items */
+    margin: 0 20px;
 }
 
 .thenavbar a {
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* Link color */
+    text-decoration: none;
+    color: white;
     font-family: sans-serif;
-    font-size: 16px; /* Font size */
-    padding: 10px 20px; /* Padding inside each link */
-    display: block; /* Make links block-level for better padding */
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
 }
 
 .thenavbar a:hover {
-    background-color: #643a79; /* Hover background color */
-    color: white; /* Keep the text color white on hover */
+    background-color: #643a79;
+    color: white;
 }
 
 .foto {
     height: 100px;
     width: 100px;
 }
+
 a {
     text-decoration: none;
     color: white;
     font-family: sans-serif;
 }
+
 a:hover {
     background-color: #643a79;
     display: flex;
 }
+
 .The1page {
     color: white;
-    margin-left:400px ;
+    margin-left: 400px;
     font-family: sans-serif;
     margin-top: 90px;
 }
+
 .Button1 {
-    background-color: #eb7d4b;  /* Button background color */
-    color: white;               /* Text color */
-    border: 2px solid #643a79;  /* Border with color */
-    padding: 20px 30px;         /* Padding for top/bottom and left/right */
-    font-size: 16px;            /* Optional: text size */
-    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #eb7d4b;
+    color: white;
+    border: 2px solid #643a79;
+    padding: 20px 30px;
+    font-size: 16px;
+    border-radius: 5px;
     margin-left: 750px;
     font-family: sans-serif;
 }
+
 .secondpage {
     background-color: #17c2a4;
     margin-top: -20px;
 }
+
 .h2b {
     color: white;
     text-decoration: none;
     text-align: center;
 }
+
 .para1 {
     color: white;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .img11 {
     height: 200px;
     width: 200px;
     margin-left: 100px;
-   
 }
+
 .h2e {
     color: white;
     text-align: center;
 }
+
 .img2-2 {
     width: 200px;
     height: 200px;
     text-align: center;
     margin-left: 100px;
 }
+
 .section2b {
     display: flex;
     margin-left: 180px;
     margin-bottom: 180px;
     margin-right: 180px;
 }
+
 .pp2 {
     color: white;
     margin-left: 50px;
     margin-right: 50px;
 }
+
 .ppp3 {
     color: white;
     margin-top: 167px;
     margin-left: 50px;
 }
+
 .h22ee {
     color: white;
     margin: 150px;
-
 }
+
 .img2-22 {
     width: 200px;
     height: 200px;
     text-align: center;
     margin-left: 100px;
     margin-right: 150px;
+}
+
+/* Media query for smaller screen sizes */
+@media only screen and (max-width: 800px) {
+    /* Navbar adjustments */
+    .thenavbar {
+        padding: 8px 0;
+    }
+
+    .thenavbar ul {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+    }
+
+    .thenavbar ul li {
+        margin: 10px 0; /* Increase space between items */
+    }
+
+    .thenavbar a {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    /* Adjust button layout */
+    .Button1 {
+        margin-left: 20px; /* Align the button to the left on small screens */
+        margin-top: 20px; /* Add margin on top */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Adjust layout for .The1page */
+    .The1page {
+        margin-left: 20px; /* Move text to the left on small screens */
+        margin-top: 30px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Adjust .section2b layout for smaller screens */
+    .section2b {
+        flex-direction: column; /* Stack elements vertically */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Adjust image sizes */
+    .img11, .img2-2, .img2-22 {
+        width: 150px; /* Reduce image size */
+        height: 150px;
+        margin-left: 0; /* Align images center */
+        margin-right: 0;
+    }
+
+    /* Adjust text and padding */
+    .para1 {
+        font-size: 14px; /* Smaller font size */
+        margin-top: 30px;
+    }
+
+    .h2b, .h2e {
+        font-size: 16px; /* Reduce font size */
+        margin-top: 20px;
+    }
+
+    /* Adjust padding and margin for .pp2 and .ppp3 */
+    .pp2, .ppp3 {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Ensure that text is centered in smaller screens */
+    .h22ee {
+        margin: 20px;
+        text-align: center;
+    }
 }
